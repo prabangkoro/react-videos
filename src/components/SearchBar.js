@@ -5,8 +5,8 @@ export default class SearchBar extends Component {
     keyword: ''
   }
 
-  onKeywordChange = e => {
-    this.setState({ keyword: e.target.value })
+  onKeywordChange = event => {
+    this.setState({ keyword: event.target.value })
   }
 
   onFormSubmit = event => {
