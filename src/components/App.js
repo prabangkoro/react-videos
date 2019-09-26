@@ -7,6 +7,10 @@ import VideoDetail from './VideoDetail'
 export default class App extends Component {
   state = { videos: [], selectedVideo: null }
 
+  componentDidMount () {
+    this.onFormSubmit('react js')
+  }
+
   onVideoSelect = video => {
     this.setState({
       selectedVideo: video
@@ -20,7 +24,10 @@ export default class App extends Component {
       }
     })
 
-    this.setState({ videos: response.data.items })
+    this.setState({
+      videos: response.data.items,
+      selectedVideo: response.data.items[0]
+    })
   }
 
   render() {
