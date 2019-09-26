@@ -13,6 +13,7 @@ export default function VideoDetail({ video }) {
     <div>
       <div className="ui embed">
         <iframe
+          title="video player"
           width="320"
           src={videoSrc}
         ></iframe>
